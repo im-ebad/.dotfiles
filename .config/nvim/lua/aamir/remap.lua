@@ -45,6 +45,7 @@ map("n", "<leader>u", "<cmd>lua require('undotree').toggle()<cr>")
 
 -- Fugitive Keybindings in Lua
 map('n', '<Leader>gs', ':Git status<CR>', { noremap = true, silent = true })
+map('n', '<Leader>ga', ':Git add .<CR>', { noremap = true, silent = true })
 map('n', '<Leader>gc', ':Git commit<CR>', { noremap = true, silent = true })
 map('n', '<Leader>gd', ':Git diff<CR>', { noremap = true, silent = true })
 map('n', '<Leader>gl', ':Git log<CR>', { noremap = true, silent = true })
