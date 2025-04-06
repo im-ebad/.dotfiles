@@ -35,7 +35,7 @@ map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find fil
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
 map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find string under cursor in cwd" })
-map("n", "<leader>fc", "<cmd>Telescope git commits<cr>", { desc = "Find todos" })
+map("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Find todos" })
 
 --Back
 map("n", "<leader>b", vim.cmd.Ex)

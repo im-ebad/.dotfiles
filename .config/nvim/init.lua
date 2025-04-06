@@ -1,3 +1,3 @@
 require("aamir.set")
-require("aamir.maps")
+require("aamir.remap")
 require("aamir.lazy")
