@@ -17,6 +17,7 @@ return {
         markdown = { "prettier" },
         c = { "clang_format" },
         cpp = { "clang_format" },
+        go = { "goimports", "gofmt" },
         -- -- lua = { "stylua" },
         -- python = { "isort", "black" },
       },
