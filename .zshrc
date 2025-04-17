@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
@@ -109,8 +110,10 @@ alias rm="rm -i"
 alias light="sudo brightnessctl s"
 alias vi="nvim"
 alias hack="cmatrix"
-# alias start="npm run dev"
-# alias fvf= "vi $(fzf)"
+alias fd='fdfind'
+alias vf='fzf | xargs nvim'
+alias neofetch="neofetch --ascii_distro arch"
+
 #alias config above
 
 export NVM_DIR="$HOME/.nvm"

@@ -31,12 +31,12 @@ map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
 
 --Telescope
-map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
-map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find string under cursor in cwd" })
-map("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Find todos" })
 
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files in current directory" })
+map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Grep (search) string in project" })
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Switch between open buffers" })
+map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "View git status changes" })
+map("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Browse git commit history" })
 --Back
 map("n", "<leader>b", vim.cmd.Ex)
 
