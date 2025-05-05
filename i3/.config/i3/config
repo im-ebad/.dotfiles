@@ -37,7 +37,6 @@ exec --no-startup-id nm-applet
 # gaps
 # gaps inner 10px
 # gaps outer 20px
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -217,12 +216,14 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewi
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # Adds transparency
- exec --no-startup-id picom -b
+exec --no-startup-id picom --experimental-backends --config ~/.dotfiles/picom/.config/picom/picom.conf
 
 # Some extra bullshit thing
 # exec --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 --rate 74.97
 exec --no-startup-id xset s on
 #scale font size
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60 --scale 0.8
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60 --scale 0.9x0.9
 #To lock the Screen
 bindsym $mod+x exec  "i3lock -c a6a2a2"
+#Taping Enable
+exec --no-startup-id xinput set-prop "ASUE1304:00 04F3:3201 Touchpad" "libinput Tapping Enabled" 1
