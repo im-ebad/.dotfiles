@@ -222,5 +222,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 # Some extra bullshit thing
 # exec --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080 --rate 74.97
 exec --no-startup-id xset s on
+#scale font size
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60 --scale 0.8
 #To lock the Screen
 bindsym $mod+x exec  "i3lock -c a6a2a2"
