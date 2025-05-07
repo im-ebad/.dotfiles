@@ -4,8 +4,8 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH=$PATH:/usr/local/bin
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH=$PATH:/usr/local/go/bin
+# export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+# export PATH=$PATH:/usr/local/go/bin
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -107,15 +107,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
 alias rm="rm -i"
-alias light="sudo brightnessctl s"
+alias bright="sudo brightnessctl s"
 alias vi="nvim"
 alias hack="cmatrix"
-alias fd='fdfind'
 alias vf='fzf | xargs nvim'
-alias neofetch="neofetch --ascii_distro arch"
 
 #alias config above
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

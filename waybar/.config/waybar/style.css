@@ -1,0 +1,36 @@
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #0B0D0F;
+
+* {
+    font-family: Mononoki Nerd Font;
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    color: @foreground;
+    padding-left: 0.7em;
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+}
+
+/* #temperature { */
+/*     padding-left: 1em */
+/* } */
+
+#cpu,
+#battery,
+#wireplumber,
+#network,
+#tray {
+    padding-right: 1em 
+}
