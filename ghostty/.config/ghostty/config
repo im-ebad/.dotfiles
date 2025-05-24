@@ -11,11 +11,11 @@
 # # Any line beginning with a # is a comment. It's not possible to put
 # # a comment after a config option, since it would be interpreted as a
 # # part of the value. For example, this will have a value of "#123abc":
-background = #181C1d
+# background = #181C1d
 # background = #1D2021
-# font-family = AnonymicePro Nerd Font
-# font-family = Fira Mono
-# font-family = Fira Mono 
+ background = #000000
+ # font-family=Mononoki Nerd Font Propo Bold Italic
+ font-family = Fira Mono 
 font-size = 16 
 #
 # # Empty values are used to reset config keys to default.
@@ -26,8 +26,9 @@ font-size = 16
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-background-opacity = 0.8
+background-opacity = 0.5
 
-theme = Everforest Dark - Hard
-# theme = nord
+# theme = Everforest Dark - Hard
+theme =ayu
+# theme = rose-pine-moon
 window-decoration = server 

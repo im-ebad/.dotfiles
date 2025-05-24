@@ -21,13 +21,13 @@ return {
             ColorMyPencils("rose-pine-main")
         end
     }
-    -- {
+    --  {
     --     "catppuccin/nvim",
     --     name = "catppuccin",
     --     config = function ()
     --         local catppuccin = require("catppuccin")
     --         catppuccin.setup({
-    --             flavour = "frappe", -- latte, frappe, macchiato, mocha
+    --             flavour = "mocha", -- latte, frappe, macchiato, mocha
     --             background = { -- :h background
     --                 light = "latte",
     --                 dark = "frappe",
