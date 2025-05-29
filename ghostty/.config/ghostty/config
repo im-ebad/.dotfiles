@@ -1,6 +1,8 @@
 # font-family = Iosevka
 # window-padding-x = 2
-#
+window-padding-x =4, 4
+window-padding-y = 4,4
+window-padding-balance = true
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
 # key=value
@@ -14,8 +16,9 @@
 # background = #181C1d
 # background = #1D2021
  background = #000000
- # font-family=Mononoki Nerd Font Propo Bold Italic
- font-family = Fira Mono 
+ font-family= Mononoki Nerd Font Mono Bold Italic
+
+ # font-family = Fira Mono 
 font-size = 16 
 #
 # # Empty values are used to reset config keys to default.
