@@ -11,7 +11,8 @@ map("n", "<leader>w", "<CMD>update<CR>")
 map("n", "<leader>q", "<CMD>q<CR>")
 
 -- Exit insert mode
-vim.keymap.set("i", "<leader>c", "<Esc>")
+-- vim.keymap.set("i", "<leader>c", "<Esc>")
+
 --New Line without insert Mode
 map('n', '<CR>', 'm`o<Esc>``', { desc = 'Insert line below without leaving normal mode' })
 map('n', '<S-CR>', 'm`O<Esc>``', { desc = 'Insert line above without leaving normal mode' })
@@ -39,6 +40,8 @@ map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Grep (search) s
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Switch between oapen buffers" })
 map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "View git status changes" })
 map("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Browse git commit history" })
+map("n", "<leader>fbh","<cmd>Telescope git_branches<cr>", { desc = "Checkout or view git branches" })
+
 --Back
 map("n", "<leader>b", vim.cmd.Ex)
 
