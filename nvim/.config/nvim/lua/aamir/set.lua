@@ -26,8 +26,8 @@ o.splitright = true
 o.splitbelow = true -- When on, splitting a window will put the new window below the current one
 o.termguicolors = true
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "cpp", "lua", "python", "javascript", "typescript", "go" },
-  callback = function()
-    vim.wo.colorcolumn = "80"
-  end,
+	pattern = { "c", "cpp", "lua", "java", "python", "javascript", "typescript", "go" },
+	callback = function()
+		vim.wo.colorcolumn = "80"
+	end,
 })

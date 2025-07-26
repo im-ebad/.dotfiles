@@ -6,34 +6,34 @@ function  ColorMyPencils(color)
 end
 
 return {
- -- {
- --     "priyanshoon/rosepine",
- --     name = "rosepine",
- --     config = function ()
- --         local rosepine = require("rose-pine")
- --         rosepine.setup({
- --             styles = {
- --                 bold = true,
- --                 italic = true,
- --                 transparency = true,
- --             },
- --         })
- --         ColorMyPencils("rose-pine-main")
- --     end
- -- }
-     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        config = function ()
-            local catppuccin = require("catppuccin")
-            catppuccin.setup({
-                flavour = "mocha", -- latte, frappe, macchiato, mocha
-                background = { -- :h background
-                    light = "latte",
-                    dark = "frappe",
-                },
-            })
-            ColorMyPencils("catppuccin")
-        end
-    }
+{
+     "priyanshoon/rosepine",
+     name = "rosepine",
+     config = function ()
+         local rosepine = require("rose-pine")
+         rosepine.setup({
+             styles = {
+                 bold = true,
+                 italic = true,
+                 transparency = true,
+             },
+         })
+         ColorMyPencils("rose-pine-main")
+     end
+ }
+    --  {
+    --     "catppuccin/nvim",
+    --     name = "catppuccin",
+    --     config = function ()
+    --         local catppuccin = require("catppuccin")
+    --         catppuccin.setup({
+    --             flavour = "mocha", -- latte, frappe, macchiato, mocha
+    --             background = { -- :h background
+    --                 light = "latte",
+    --                 dark = "frappe",
+    --             },
+    --         })
+    --         ColorMyPencils("catppuccin")
+    --     end
+    -- }
 }

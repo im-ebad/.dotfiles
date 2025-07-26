@@ -16,7 +16,7 @@ window-padding-balance = true
 # background = #181C1d
 # background = #1D2021
  background = #000000
- font-family= Mononoki Nerd Font Mono Bold Italic
+ font-family= Mononoki Nerd Font Mono Bold Regular
 
  # font-family = Fira Mono 
 font-size = 16 
@@ -29,7 +29,7 @@ font-size = 16
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-background-opacity = 0.5
+background-opacity = 0.6
 
 # theme = Everforest Dark - Hard
 theme =ayu

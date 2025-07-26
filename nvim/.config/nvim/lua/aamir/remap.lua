@@ -1,25 +1,27 @@
 vim.g.mapleader = " "
 
-local function map(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { silent = true })
+-- Helper function to map keys easily
+
+local function map(mode, lhs, rhs, opts)
+	local options = { silent = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- Save
-map("n", "<leader>w", "<CMD>update<CR>")
+-- Save and Quit
+map("n", "<leader>w", "<CMD>update<CR>", { desc = "Save file" })
+map("n", "<leader>q", "<CMD>q<CR>", { desc = "Quit without save" })
 
--- Quit
-map("n", "<leader>q", "<CMD>q<CR>")
+-- Insert new line without insert mode
+map("n", "<CR>", "m`o<Esc>``", { desc = "Insert line below without leaving normal mode" })
+map("n", "<S-CR>", "m`O<Esc>``", { desc = "Insert line above without leaving normal mode" })
 
--- Exit insert mode
--- vim.keymap.set("i", "<leader>c", "<Esc>")
-
---New Line without insert Mode
-map('n', '<CR>', 'm`o<Esc>``', { desc = 'Insert line below without leaving normal mode' })
-map('n', '<S-CR>', 'm`O<Esc>``', { desc = 'Insert line above without leaving normal mode' })
--- New Windows
-map("n", "<leader>v", "<CMD>vsplit<CR>")
-map("n", "<leader>h", "<CMD>split<CR>")
-map("n", "<leader>n", "<CMD>vnew<CR>")
+-- Split Windows
+map("n", "<leader>v", "<CMD>vsplit<CR>", { desc = "Split vertically" })
+map("n", "<leader>h", "<CMD>split<CR>", { desc = "Split horizontally" })
+map("n", "<leader>n", "<CMD>vnew<CR>", { desc = "New vertical split" })
 
 -- Window Navigation
 map("n", "<C-h>", "<C-w>h")
@@ -33,26 +35,32 @@ map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
 
---Telescope
+-- Telescope
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "List buffers" })
+map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Git status" })
+map("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Git commits" })
+map("n", "<leader>fbh", "<cmd>Telescope git_branches<cr>", { desc = "Git branches" })
 
-map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files in current directory" })
-map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Grep (search) string in project" })
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Switch between oapen buffers" })
-map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "View git status changes" })
-map("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Browse git commit history" })
-map("n", "<leader>fbh","<cmd>Telescope git_branches<cr>", { desc = "Checkout or view git branches" })
+-- Back to netrw or file browser
+map("n", "<leader>b", vim.cmd.Ex, { desc = "File browser" })
 
---Back
-map("n", "<leader>b", vim.cmd.Ex)
+-- Undotree
+map("n", "<leader>u", function()
+	require("undotree").toggle()
+end, { desc = "Toggle Undotree" })
 
---Undotree
-map("n", "<leader>u", "<cmd>lua require('undotree').toggle()<cr>")
+-- Fugitive
+map("n", "<Leader>gs", ":Git status<CR>", { desc = "Git status" })
+map("n", "<Leader>ga", ":Git add .<CR>", { desc = "Git add all" })
+map("n", "<Leader>gc", ":Git commit<CR>", { desc = "Git commit" })
+map("n", "<Leader>gd", ":Git diff<CR>", { desc = "Git diff" })
+map("n", "<Leader>gl", ":Git log<CR>", { desc = "Git log" })
+map("n", "<Leader>gb", ":Git blame<CR>", { desc = "Git blame" })
+map("n", "<Leader>gp", ":Git push<CR>", { desc = "Git push" })
 
--- Fugitive Keybindings in Lua
-map('n', '<Leader>gs', ':Git status<CR>', { noremap = true, silent = true })
-map('n', '<Leader>ga', ':Git add .<CR>', { noremap = true, silent = true })
-map('n', '<Leader>gc', ':Git commit<CR>', { noremap = true, silent = true })
-map('n', '<Leader>gd', ':Git diff<CR>', { noremap = true, silent = true })
-map('n', '<Leader>gl', ':Git log<CR>', { noremap = true, silent = true })
-map('n', '<Leader>gb', ':Git blame<CR>', { noremap = true, silent = true })
-map('n', '<Leader>gp', ':Git push<CR>', { noremap = true, silent = true })
+-- LSP
+map("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
+map("n", "gd", vim.lsp.buf.definition, { desc = "LSP Go to Definition" })
+map({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
