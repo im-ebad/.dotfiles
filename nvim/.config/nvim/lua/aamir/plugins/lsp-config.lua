@@ -12,6 +12,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"ts_ls",
+					"clangd",
 					"pyright",
 					"bashls",
 					"marksman",
@@ -22,13 +23,38 @@ return {
 		end,
 	},
 	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.ts_ls.setup({})
-			lspconfig.pyright.setup({})
-			lspconfig.bashls.setup({})
-		end,
+
+		{
+			"neovim/nvim-lspconfig",
+			config = function()
+				local lspconfig = require("lspconfig")
+				local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+				lspconfig.lua_ls.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.ts_ls.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.clangd.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.pyright.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.bashls.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.marksman.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.dockerls.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.yamlls.setup({
+					capabilities = capabilities,
+				})
+			end,
+		},
 	},
 }

@@ -1,7 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-
+#Path to tmux-sessionizer
+export PATH="$HOME/.local/scripts:$PATH"
+bindkey -s ^f "tmux-sessionizer\n"
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH=$PATH:/usr/local/bin

@@ -18,6 +18,7 @@ return {
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				go = { "goimports", "gofmt" },
+				java = { "google_java_format" },
 				lua = { "stylua" },
 				-- python = { "isort", "black" },
 			},

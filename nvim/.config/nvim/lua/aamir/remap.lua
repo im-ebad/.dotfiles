@@ -59,8 +59,13 @@ map("n", "<Leader>gd", ":Git diff<CR>", { desc = "Git diff" })
 map("n", "<Leader>gl", ":Git log<CR>", { desc = "Git log" })
 map("n", "<Leader>gb", ":Git blame<CR>", { desc = "Git blame" })
 map("n", "<Leader>gp", ":Git push<CR>", { desc = "Git push" })
+-- map("n", "<leader>gi", ":Gedit<CR>", { desc = "Open file from Git object" })
 
 -- LSP
 map("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
 map("n", "gd", vim.lsp.buf.definition, { desc = "LSP Go to Definition" })
 map({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
+map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+
+-- Toggle Terminal
+map("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
