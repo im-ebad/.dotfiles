@@ -59,7 +59,7 @@ map("n", "<Leader>gd", ":Git diff<CR>", { desc = "Git diff" })
 map("n", "<Leader>gl", ":Git log<CR>", { desc = "Git log" })
 map("n", "<Leader>gb", ":Git blame<CR>", { desc = "Git blame" })
 map("n", "<Leader>gp", ":Git push<CR>", { desc = "Git push" })
--- map("n", "<leader>gi", ":Gedit<CR>", { desc = "Open file from Git object" })
+map("n", "<leader>gi", ":Git<CR>", { desc = "Open Fugitive Git status" })
 
 -- LSP
 map("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })

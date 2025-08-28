@@ -1,14 +1,16 @@
+
 (defcfg
   process-unmapped-keys yes
 )
+
 (defsrc
   a s d f
   j k l ;
 )
 
 (defvar
-tap-time 230
-hold-time 250
+  tap-time 200          
+  hold-time 300
 )
 
 (defalias

@@ -1,102 +1,64 @@
-/* @define-color foreground #eff0f1; */
-/* @define-color foreground-inactive #7f8c8d; */
-/* @define-color background #232629; */
-/* @define-color background-alt #31363b; */
-/**/
-/* * { */
-/*     font-family: Mononoki Nerd Font; */
-/*     font-size: 17px; */
-/*     padding: 0; */
-/*     margin: 0; */
-/* } */
-/**/
-/* #waybar { */
-/*     color: @foreground; */
-/*     background-color: @background; */
-/* } */
-/**/
-/* #workspaces button { */
-/*     padding-left: 1em; */
-/*     padding-right: 1.3em; */
-/* } */
-/**/
-/* #workspaces button.empty { */
-/*     color: @foreground-inactive; */
-/* } */
-/**/
-/* #workspaces button.active { */
-/*     background-color: @background-alt; */
-/*     color: @foreground; */
-/*     border-radius: 3px; */
-/* } */
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #0B0D0F;
 
-/* Define colors */
-@define-color foreground #eff0f1; /* Light gray/white for active text */
-@define-color foreground-inactive #95a5a6; /* Slightly brighter gray for inactive text (improved contrast) */
-@define-color background #232629; /* Dark gray for Waybar background */
-@define-color background-alt #31363b; /* Slightly lighter gray for active elements */
-
-/* Global styles */
 * {
-    font-family: Mononoki Nerd Font;
-    font-size: 15px;
-    padding: 0;
-    margin: 0;
+  font-family:
+    Mononoki Nerd Font,
+    "Font Awesome 6 Free",
+    "Font Awesome 5 Free",
+    "Nerd Font",
+    sans-serif;
+  font-size: 17px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
 }
 
-/* Waybar main bar */
 #waybar {
-    color: @foreground;
-    background-color: @background;
-    border-radius: 0px; /* Optional: Ensures clean edges */
+  color: @foreground;
+  background-color: transparent;
 }
-
-/* Workspace buttons */
 #workspaces button {
-    padding-left: 1em;
-    padding-right: 1.3em;
-    color: @foreground;
-    background-color: transparent;
-    border-radius: 3px;
-    margin: 2px; /* Adds slight spacing between buttons */
-    transition: all 0.2s ease; /* Smooth transitions for hover/active states */
+  color: @foreground;
+  padding-left: 0.5rem;
+  margin: 0 2px 0 0;
+  padding: 0 2px 2px 0;
 }
 
-/* Empty/inactive workspaces */
 #workspaces button.empty {
-    color: @foreground-inactive;
+  color: @foreground-inactive;
 }
-
-/* Active workspace */
-#workspaces button.active {
-    background-color: @background-alt;
-    color: @foreground;
-    border-radius: 3px;
-    box-shadow: inset 0 -2px 0 #4a90d9; /* Subtle underline effect for active state */
+#workspaces {
+  background-color: @background;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 0 8px;
 }
-
-/* Hover state for workspace buttons */
-#workspaces button:hover {
-    background-color: @background-alt;
-    color: @foreground;
-    border-radius: 3px;
-}
-
-#wireplumber,
-#bat,
-#tray,
-#usage,
-#net {
-    background-color: @background-alt;
-    border-radius: 3px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: 0.3em;
-}
-
-#battery,
+#cpu,
 #memory,
-#language,
+#battery,
+#clock {
+  background-color: @background;
+  padding: 0 8px;
+}
+#tray {
+  background-color: @background;
+  padding: 0 8px;
+}
 #network {
-    margin-right: 0.8em;
+  background-color: @background;
+  padding: 0 12px;
+}
+#wireplumber {
+  background-color: @background;
+  padding: 0 8px;
+}
+#custom-arch {
+  color: @foreground;
+  background-color: @background;
+  padding: 2 8px;
+  margin: 2 2px;
+  border-radius: 20px;
+  min-height: 30px;
 }

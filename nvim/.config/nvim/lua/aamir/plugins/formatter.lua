@@ -20,7 +20,7 @@ return {
 				go = { "goimports", "gofmt" },
 				java = { "google_java_format" },
 				lua = { "stylua" },
-				-- python = { "isort", "black" },
+				python = { "black" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

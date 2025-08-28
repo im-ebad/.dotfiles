@@ -3,34 +3,60 @@
 @define-color background #0B0D0F;
 
 * {
-  font-family: Mononoki Nerd Font;
+  font-family:
+    Mononoki Nerd Font,
+    "Font Awesome 6 Free",
+    "Font Awesome 5 Free",
+    "Nerd Font",
+    sans-serif;
   font-size: 17px;
+  border-radius: 6px;
   padding: 0;
   margin: 0;
 }
 
 #waybar {
   color: @foreground;
-  background-color: @background;
+  background-color: transparent;
 }
-
 #workspaces button {
   color: @foreground;
-  padding-left: 0.7em;
+  margin: 0 2px 0 0;
+  padding: 1px 6px 2px 2px;
 }
 
 #workspaces button.empty {
   color: @foreground-inactive;
 }
-
-/* #temperature { */
-/*     padding-left: 1em */
-/* } */
-
+#workspaces {
+  background-color: @background;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0 8px;
+}
+#temperature,
 #cpu,
+#memory,
 #battery,
-#wireplumber,
-#network,
+#clock {
+  background-color: @background;
+  padding: 0 8px;
+}
 #tray {
-  padding-right: 1em;
+  background-color: @background;
+  padding: 0 8px;
+}
+#network {
+  background-color: @background;
+  padding: 0 12px;
+}
+#wireplumber {
+  background-color: @background;
+  padding: 0 8px;
+}
+#custom-lock {
+  background-color: @background;
+  margin: 0;
+  padding: 4px 10px;
+  padding-right: 14px;
 }

@@ -114,7 +114,7 @@ alias bright="sudo brightnessctl s"
 alias vi="nvim"
 alias hack="cmatrix"
 alias vf='fzf | xargs nvim'
-
+alias ts='tmux-sessionizer' 
 #alias config above
 
 # export NVM_DIR="$HOME/.nvm"

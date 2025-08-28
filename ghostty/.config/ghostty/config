@@ -1,7 +1,7 @@
 # font-family = Iosevka
 # window-padding-x = 2
 window-padding-x =4, 4
-window-padding-y = 4,4
+window-padding-y = 5,4
 window-padding-balance = true
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
@@ -29,7 +29,7 @@ font-size = 16
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-background-opacity = 0.6
+background-opacity = 0.7
 
 # theme = Everforest Dark - Hard
 theme =ayu

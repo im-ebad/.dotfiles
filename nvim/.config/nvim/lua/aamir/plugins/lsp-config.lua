@@ -18,6 +18,8 @@ return {
 					"marksman",
 					"dockerls",
 					"yamlls",
+					"html",
+					"cssls",
 				},
 			})
 		end,
@@ -52,6 +54,15 @@ return {
 					capabilities = capabilities,
 				})
 				lspconfig.yamlls.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.jdtls.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.html.setup({
+					capabilities = capabilities,
+				})
+				lspconfig.cssls.setup({
 					capabilities = capabilities,
 				})
 			end,
