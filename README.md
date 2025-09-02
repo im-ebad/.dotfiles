@@ -1,2 +1,1 @@
-# Personal Setup for Productivity
-This is my personal dotfile repository where I keep all my custom configurations for my dev environment. From my terminal setup (Zsh) to my Vim editor and Git configuration, this repo houses everything I need to streamline my workflow. Every time I set up a new system, this is the first thing I pull down to ensure my environment is consistent across all devices. I’m always tweaking things to make my setup more efficient, so this repo evolves with me!
+# My Dev Setup Is Better Than Yours

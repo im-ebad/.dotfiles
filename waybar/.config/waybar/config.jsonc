@@ -7,11 +7,12 @@
     "margin-left": 3,
     "margin-right": 3,
 
-    "modules-left": ["custom/lock","hyprland/workspaces","temperature"],
+    "modules-left": ["custom/poweroff","temperature","backlight","hyprland/workspaces"],
     "modules-center": [ "clock"],
     "modules-right":["wireplumber" ,"cpu", "memory", "battery", "network", "tray"],
    "temperature":{
-      "format": "☀ {temperatureC}°C",
+    "thermal-zone":0,
+      "format": "⛅ {temperatureC}°C",
       "interval": 10,
       "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
       "tooltip-format": "Temp in Fahrenheit: {temperatureF}°F"
@@ -23,7 +24,7 @@
       "default": ""
     },
         "on-click": "activate",
-      "icon-size": 8,
+        "icon-size": 2,
         "sort-by-number": true,
         "persistent-workspaces": {
             "1": [],
@@ -36,6 +37,9 @@
 
     "battery": {
       "bat": "BAT0", "interval": 60,
+      "states":{
+      "red-low":20
+      },
       "format": "{icon} {capacity}%",
       "format-charging": " {capacity}%",
       "format-full": " {capacity}%",
@@ -48,8 +52,8 @@
     },
 
     "clock": {
-        "format": "{:%d:%m:%Y <span color='#5eacd3'>󰣇</span>  [%H:%M]}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": "{:%d/%m  <span color='#5eacd3'>󰣇</span>  %H:%M}",
+    "tooltip-format": "<span  font='Lexend 16'><tt><small>{calendar}</small></tt></span>"
     },
 
     "wireplumber": {
@@ -74,22 +78,30 @@
     },
 
     "network": {
-        "interface":"wlp2s0",
+    "interface":"wlo1",
         "format-wifi": "  {signalStrength}%",
-        "format-disconnected":"󰤭 ",
-        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "format-disconnected":"󰤮 ",
         "tooltip-format-wifi": "{essid} ({signalStrength})%",
         "tooltip-format-disconnected": "Disconnected",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "on-click":"exec ~/.config/waybar/scripts/network.sh"
     },
-   "custom/lock": {
-      "tooltip": false,
-      "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
-      "format": ""
+   "custom/poweroff": {
+      "format": "", // Unicode power symbol
+      "on-click": "exec ~/.config/waybar/scripts/powermenu.sh", // Path to your power menu script
+      "tooltip-format": "Power Menu"    
     },
     "tray": {
         "icon-size": 16,
         "spacing": 16
-    }
+    },
+   "backlight": {
+    "format": "{icon}  {percent}%",
+    "device": "intel_backlight",
+    "format-icons": ["", ""],
+    "on-scroll-up":   "brightnessctl s 1%+",
+    "on-scroll-down": "brightnessctl s 1%-",
+    // "on-click-right": "brightnessctl s 0"
+},
 
 }
-

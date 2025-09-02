@@ -65,6 +65,9 @@ return {
 				lspconfig.cssls.setup({
 					capabilities = capabilities,
 				})
+				lspconfig.astro.setup({
+					capabilities = capabilities,
+				})
 			end,
 		},
 	},

@@ -14,7 +14,9 @@
   padding: 0;
   margin: 0;
 }
-
+#battery.red-low {
+  color: #d30000;
+}
 #waybar {
   color: @foreground;
   background-color: transparent;
@@ -34,6 +36,7 @@
   margin: 0;
   padding: 0 8px;
 }
+#backlight,
 #temperature,
 #cpu,
 #memory,
@@ -54,7 +57,7 @@
   background-color: @background;
   padding: 0 8px;
 }
-#custom-lock {
+#custom-poweroff {
   background-color: @background;
   margin: 0;
   padding: 4px 10px;
