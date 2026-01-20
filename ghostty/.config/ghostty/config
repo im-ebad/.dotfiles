@@ -13,8 +13,8 @@ window-padding-balance = true
 # # any line beginning with a # is a comment. it's not possible to put
 # # a comment after a config option, since it would be interpreted as a
 # # part of the value. for example, this will have a value of "#123abc":
- background =  #0a0a0a
- # background = #0c110c 
+ # background =  #0a0a0a
+ background = #1E222A
  # background =  #000000
  font-family= Mononoki Nerd Font Mono Bold Regular
 
@@ -29,9 +29,10 @@ font-size = 16
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-background-opacity = 0.8
+ # background-opacity = 0.8
 
 # theme = Everforest Dark - Hard
-theme =ayu
+
+theme = Nordfox
 # theme = Kanagawa Dragon 
 window-decoration = server 

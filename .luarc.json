@@ -1,6 +1,10 @@
 {
     "diagnostics.globals": [
         "vim",
-        "mpa"
+        "mpa",
+        "local"
+    ],
+    "diagnostics.disable": [
+        "undefined-global"
     ]
 }

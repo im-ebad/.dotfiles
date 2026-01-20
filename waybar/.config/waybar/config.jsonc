@@ -52,7 +52,7 @@
     },
 
     "clock": {
-        "format": "{:%d/%m  <span color='#5eacd3'>󰣇</span>  %H:%M}",
+        "format": "  {:%d/%m  <span color='#5eacd3'>󰣇</span>    %H:%M}",
     "tooltip-format": "<span  font='Lexend 16'><tt><small>{calendar}</small></tt></span>"
     },
 
@@ -87,7 +87,7 @@
         "on-click":"exec ~/.config/waybar/scripts/network.sh"
     },
    "custom/poweroff": {
-      "format": "", // Unicode power symbol
+      "format": "", 
       "on-click": "exec ~/.config/waybar/scripts/powermenu.sh", // Path to your power menu script
       "tooltip-format": "Power Menu"    
     },
@@ -101,7 +101,6 @@
     "format-icons": ["", ""],
     "on-scroll-up":   "brightnessctl s 1%+",
     "on-scroll-down": "brightnessctl s 1%-",
-    // "on-click-right": "brightnessctl s 0"
 },
 
 }

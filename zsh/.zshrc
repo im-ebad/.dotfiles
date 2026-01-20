@@ -114,6 +114,7 @@ alias vi="nvim"
 alias hack="cmatrix"
 alias vf='fzf | xargs nvim'
 alias ts='tmux-sessionizer' 
+alias bt='bluetui'
 #alias config above
 
 # export NVM_DIR="$HOME/.nvm"

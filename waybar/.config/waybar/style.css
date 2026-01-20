@@ -1,5 +1,7 @@
-@define-color foreground #eeeeee;
-@define-color foreground-inactive #aaaaaa;
+@define-color foreground #ECEFF4;
+/* @define-color foreground #eeeeee; */
+/* @define-color foreground-inactive #aaaaaa; */
+@define-color foreground-inactive #88C0D0;
 @define-color background #0B0D0F;
 
 * {
@@ -30,12 +32,14 @@
 #workspaces button.empty {
   color: @foreground-inactive;
 }
+
 #workspaces {
   background-color: @background;
   border-radius: 5px;
   margin: 0;
   padding: 0 8px;
 }
+
 #backlight,
 #temperature,
 #cpu,
@@ -59,6 +63,7 @@
 }
 #custom-poweroff {
   background-color: @background;
+  color: #f38ba8;
   margin: 0;
   padding: 4px 10px;
   padding-right: 14px;

@@ -6,14 +6,6 @@ return {
 		"hrsh7th/cmp-path", -- source for file system paths
 		"hrsh7th/cmp-nvim-lsp", --LSP
 		"saadparwaiz1/cmp_luasnip",
-		{
-			"L3MON4D3/LuaSnip",
-			version = "v2.*",
-			-- install jsregexp (optional!).
-			build = "make install_jsregexp",
-		},
-		"rafamadriz/friendly-snippets",
-		"onsails/lspkind.nvim", -- vs-code like pictograms
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -27,6 +19,13 @@ return {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
 				end,
+			},
+			formatting = {
+				format = require("lspkind").cmp_format({
+					mode = "symbol_text", -- show symbol + text
+					maxwidth = 50,
+					ellipsis_char = "...",
+				}),
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-d>"] = cmp.mapping.scroll_docs(-4),
