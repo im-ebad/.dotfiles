@@ -1,4 +1,4 @@
-@define-color foreground #eeeeee;
+@define-color foreground #ECEFF4;
 @define-color foreground-inactive #aaaaaa;
 @define-color background #0B0D0F;
 
@@ -13,28 +13,16 @@
   border-radius: 8px;
   padding: 0;
   margin: 0;
+
 }
 
-#waybar {
-  color: @foreground;
-  background-color: transparent;
-}
-#workspaces button {
-  color: @foreground;
-  padding-left: 0.5rem;
-  margin: 0 2px 0 0;
-  padding: 0 2px 2px 0;
-}
+#battery.red-low { color: #d30000; } 
+#waybar { color: @foreground; background-color: transparent; } 
+#workspaces button { color: @foreground; margin: 0 2px 0 0; padding: 1px 6px 2px 2px; } 
+#workspaces button.empty { color: @foreground-inactive; } 
+#workspaces { background-color: @background; border-radius: 5px; margin: 0; padding: 0 8px; }
 
-#workspaces button.empty {
-  color: @foreground-inactive;
-}
-#workspaces {
-  background-color: @background;
-  border-radius: 5px;
-  margin: 0 10px;
-  padding: 0 8px;
-}
+#backlight,
 #cpu,
 #memory,
 #battery,
@@ -54,11 +42,10 @@
   background-color: @background;
   padding: 0 8px;
 }
-#custom-arch {
-  color: @foreground;
+#custom-poweroff { 
   background-color: @background;
-  padding: 2 8px;
-  margin: 2 2px;
-  border-radius: 20px;
-  min-height: 30px;
+  color: #f38ba8;
+  margin: 0;
+  padding: 4px 10px;
+  padding-right: 14px;
 }

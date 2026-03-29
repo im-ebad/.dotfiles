@@ -69,3 +69,19 @@ map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
 
 -- Toggle Terminal
 map("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
+
+-- Toggle NeoTree
+map("n", "<leader>t", "<cmd>Neotree filesystem toggle<CR>", {})
+
+-- Next / Previous buffer : for buffer line plugin
+-- map("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
+-- map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
+-- map("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<CR>")
+-- map("n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<CR>")
+-- map("n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<CR>")
+-- map("n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<CR>")
+-- map("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
+-- map("n", "<leader>bl", "<cmd>BufferLineCloseLeft<CR>", { desc = "Close left buffers" })
+-- map("n", "<leader>br", "<cmd>BufferLineCloseRight<CR>", { desc = "Close right buffers" })
+-- map("n", "<leader>bo", "<cmd>BufferLineCloseOthers<CR>", { desc = "Close other buffers" })
+-- map("n", "<leader>bp", "<cmd>BufferLinePick<CR>", { desc = "Pick buffer" })

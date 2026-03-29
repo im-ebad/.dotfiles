@@ -21,7 +21,7 @@ background-color=#2E3440
 text-color=#ECEFF4
 border-color=#88C0D0
 
-default-timeout=5000
+default-timeout=0
 
 # Low urgency
 [urgency=low]
@@ -38,5 +38,4 @@ border-color=#88C0D0
 background-color=#3B4252
 border-color=#BF616A
 text-color=#ECEFF4
-default-timeout=0
 

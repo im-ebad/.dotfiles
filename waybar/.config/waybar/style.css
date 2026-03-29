@@ -1,8 +1,6 @@
-@define-color foreground #ECEFF4;
-/* @define-color foreground #eeeeee; */
-/* @define-color foreground-inactive #aaaaaa; */
-@define-color foreground-inactive #88C0D0;
-@define-color background #0B0D0F;
+@define-color foreground #E5E9F0;
+@define-color foreground-inactive #7A8396;
+@define-color background rgba(24, 28, 36, 0.88);
 
 * {
   font-family:
@@ -11,33 +9,36 @@
     "Font Awesome 5 Free",
     "Nerd Font",
     sans-serif;
-  font-size: 17px;
-  border-radius: 6px;
+  font-size: 16px;
+  border-radius: 8px;
   padding: 0;
   margin: 0;
 }
+
 #battery.red-low {
   color: #d30000;
 }
+
 #waybar {
   color: @foreground;
   background-color: transparent;
 }
+
 #workspaces button {
   color: @foreground;
-  margin: 0 2px 0 0;
-  padding: 1px 6px 2px 2px;
+  margin: 0 3px 0 0;
+  padding: 2px 7px 2px 3px;
 }
 
 #workspaces button.empty {
-  color: @foreground-inactive;
+  color: @foreground;
 }
 
 #workspaces {
   background-color: @background;
-  border-radius: 5px;
+  border-radius: 7px;
   margin: 0;
-  padding: 0 8px;
+  padding: 1px 9px;
 }
 
 #backlight,
@@ -47,24 +48,28 @@
 #battery,
 #clock {
   background-color: @background;
-  padding: 0 8px;
+  padding: 1px 9px;
 }
+
 #tray {
   background-color: @background;
-  padding: 0 8px;
+  padding: 1px 9px;
 }
+
 #network {
   background-color: @background;
-  padding: 0 12px;
+  padding: 1px 13px;
 }
+
 #wireplumber {
   background-color: @background;
-  padding: 0 8px;
+  padding: 1px 9px;
 }
+
 #custom-poweroff {
   background-color: @background;
   color: #f38ba8;
   margin: 0;
-  padding: 4px 10px;
-  padding-right: 14px;
+  padding: 4px 12px;
+  padding-right: 16px;
 }

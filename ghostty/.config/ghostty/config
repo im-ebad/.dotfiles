@@ -1,38 +1,44 @@
-# font-family = Iosevka
-# window-padding-x = 2
-window-padding-x =4, 4
-window-padding-y =4, 4
+
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-size = 16
+
+# Padding
+window-padding-x = 4, 4
+window-padding-y = 4, 4
 window-padding-balance = true
-# # spacing around the equals sign does not matter.
-# # all of these are identical:
-# key=value
-# key= value
-# key =value
-# key = value
-#
-# # any line beginning with a # is a comment. it's not possible to put
-# # a comment after a config option, since it would be interpreted as a
-# # part of the value. for example, this will have a value of "#123abc":
- # background =  #0a0a0a
- background = #1E222A
- # background =  #000000
- font-family= Mononoki Nerd Font Mono Bold Regular
 
- # font-family = Fira Mono 
-font-size = 16 
-#
-# # Empty values are used to reset config keys to default.
-# key =
-#
-# # Some config options have unique syntaxes for their value,
-# # which is explained in the docs for that config option.
-# # Just for example:
-# resize-overlay-duration = 4s 200ms
+# Window
+window-decoration = server
 
- # background-opacity = 0.8
+# Opacity (optional, keep or remove)
+background-opacity = 0.9
 
-# theme = Everforest Dark - Hard
+# Core colors
+background = #090E13
+# background = #14171d
+foreground = #c5c9c7
+cursor-color = #c5c9c7
 
-theme = Nordfox
-# theme = Kanagawa Dragon 
-window-decoration = server 
+selection-background = #22262D
+# selection-background = #3E424A
+selection-foreground = #c5c9c7
+
+# ANSI Palette
+palette = 0=#090E13
+palette = 1=#c4746e
+palette = 2=#8a9a7b
+palette = 3=#c4b28a
+palette = 4=#8ba4b0
+palette = 5=#a292a3
+palette = 6=#8ea4a2
+palette = 7=#a4a7a4
+palette = 8=#5C6066
+palette = 9=#e46876
+palette = 10=#87a987
+palette = 11=#e6c384
+palette = 12=#7fb4ca
+palette = 13=#938aa9
+palette = 14=#7aa89f
+palette = 15=#c5c9c7
+
