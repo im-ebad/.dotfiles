@@ -123,6 +123,7 @@ alias vf='fzf | xargs nvim'
 alias ts='tmux-sessionizer' 
 alias bt='bluetui'
 alias update='paru -Syu'
+alias yt="ytcui"
 #alias config above
 
 # export NVM_DIR="$HOME/.nvm"
@@ -131,3 +132,6 @@ alias update='paru -Syu'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. "$HOME/.local/bin/env"
+source /usr/share/fzf/key-bindings.zsh

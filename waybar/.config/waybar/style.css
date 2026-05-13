@@ -1,6 +1,9 @@
-@define-color foreground #E5E9F0;
+/* @define-color foreground #E5E9F0; */
 @define-color foreground-inactive #7A8396;
-@define-color background rgba(24, 28, 36, 0.88);
+/* @define-color background rgba(24, 28, 36, 0.88); */
+
+@define-color foreground #c5c9c7;
+@define-color background #11171D;
 
 * {
   font-family:

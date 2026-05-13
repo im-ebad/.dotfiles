@@ -1,1 +1,1 @@
-# My Dev Setup Is Better Than Yours
+# I used Arch btw -

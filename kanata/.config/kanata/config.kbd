@@ -1,11 +1,10 @@
 
 (defcfg
-  process-unmapped-keys yes
+  process-unmapped-keys true
 )
 
 (defsrc
-  a s d f
-  j k l ;
+   a s d f j k l ;
 )
 
 (defvar
